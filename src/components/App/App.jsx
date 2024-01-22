@@ -7,6 +7,7 @@ import Feelings from '../Feeling/Feeeling';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import Understanding from '../Understanding/Understanding';
+import Review from '../Review/Review'
 
 function App() {
 
@@ -32,6 +33,9 @@ function App() {
             </Route>
             <Route path="/comments/">
             <Comments/>
+            </Route>
+            <Route path ="/review/">
+              <Review/>
             </Route>
           </Router>
     </div>
