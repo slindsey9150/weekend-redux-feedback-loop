@@ -16,15 +16,23 @@ function App() {
         <h1 className='App-title'>Feedback!</h1>
         <h4>Don't forget it!</h4>
       </header>
-      <Feelings/>
-          <Support/>
-          <Comments/>
-          <Understanding/>
+     
+        
+         
+          
           <Router>
-            <Route path="/"></Route>
-            <Route path="/understanding/"></Route>
-            <Route path="/support/"></Route>
-            <Route path="/comments/"></Route>
+            <Route path="/" exact>
+            <Feelings/>
+            </Route>
+            <Route path="/understanding/">
+            <Understanding/>
+            </Route>
+            <Route path="/support/">
+            <Support/>
+            </Route>
+            <Route path="/comments/">
+            <Comments/>
+            </Route>
           </Router>
     </div>
   );
