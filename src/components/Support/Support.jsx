@@ -1,7 +1,11 @@
 
 function Support () {
     return (
-        <>Support</>
+        <>
+        <h2>How well are you being supported?</h2>
+        <input type="number"></input>
+        <button>NEXT</button>
+        </>
     )
 }
 
