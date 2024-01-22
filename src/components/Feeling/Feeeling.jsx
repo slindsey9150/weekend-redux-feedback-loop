@@ -7,16 +7,25 @@ import store from "../../store"
 
 function Feelings () {
     const [userFeeling, setFeeling] = useState({
-        feeling: ""
+        feeling: " ",
+
     })
+    
     const dispatch = useDispatch()
     const history = useHistory()
+
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        dispatch({ type: 'ADD_FEEDBACK_INFO', payload: userFeeling })
+        history.push('/understanding/')}
 
     return (
         <>
         <h2>How are you feeling today?</h2>
-        <form>
-        <input type="number"></input>
+        <form onSubmit={handleSubmit}>
+        <input
+        onChange={(event) => setFeeling({...userFeeling, feeling: event.target.value})}
+         type="number"></input>
         <button>NEXT</button>
         </form>
         </>
