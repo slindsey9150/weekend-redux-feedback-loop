@@ -22,9 +22,10 @@ function Support () {
         <h2>How well are you being supported?</h2>
         <form  onSubmit={handleSubmit}>
         <input 
-          onChange={(event) => setSupport({...userSupport, support: event.target.value})}
-           type="number"></input>
-        <button>NEXT</button>
+            data-testid="input"
+            onChange={(event) => setSupport({...userSupport, support: event.target.value})}
+            type="number"></input>
+        <button data-testid="next">NEXT</button>
         </form>
         </>
     )

@@ -22,9 +22,10 @@ function Understanding () {
         <h2>How well are you understanding the content?</h2>
         <form onSubmit={handleSubmit} >
         <input 
+        data-testid="input"
          onChange={(event) => setUnderstanding({...userUnderstanding, understanding: event.target.value})}
         type="number"></input>
-        <button>NEXT</button>
+        <button data-testid="next">NEXT</button>
         </form>
         </>
     )

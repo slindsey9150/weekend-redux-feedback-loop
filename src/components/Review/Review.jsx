@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { useState} from "react";
 import store from "../../store"
+import axios from 'axios'
 
 
 function Review () {
@@ -17,8 +18,28 @@ function Review () {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        dispatch({ type: 'CLEAR_FEEDBACK_INFO' })
-        history.push('/')}
+
+        axios({
+            method: 'POST',
+            url: '/api/feedback',
+            data: {
+              feeling: feelingInfo.feeling,
+              understanding: understandingInfo.understanding,
+              support: supportInfo.support,
+              comments:  commentInfo.comments          
+             }
+          })
+          .then(response => {
+            console.log('Full response from server:', response);
+            dispatch({ type: 'CLEAR_FEEDBACK_INFO' })
+            history.push('/')  
+          })
+          .catch(error =>{
+            console.log('Got an error from server:', error);
+          });
+        
+    
+        }
 
     return (
         <>
@@ -29,7 +50,7 @@ function Review () {
                 <p><b>How well are you being supported?</b>{supportInfo.support}</p>
                 <p> <b>Any comments you want to leave? </b> <>{commentInfo.comments}</></p>
             
-        <button>Submit</button>
+        <button data-testid="next">Submit</button>
         </form>
         </>
     )

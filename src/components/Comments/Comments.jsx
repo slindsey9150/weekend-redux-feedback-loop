@@ -23,9 +23,10 @@ function Comments () {
         <h2>Any comments you want to leave?</h2>
         <form onSubmit={handleSubmit}>
         <input 
+        data-testid="input"
         onChange={(event) => setComments({...userComments, comments: event.target.value})}
         type="text"></input>
-        <button>SUBMIT</button>
+        <button data-testid="next">SUBMIT</button>
         </form>
         </>
     )

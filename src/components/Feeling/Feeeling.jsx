@@ -24,9 +24,10 @@ function Feelings () {
         <h2>How are you feeling today?</h2>
         <form onSubmit={handleSubmit}>
         <input
+        data-testid="input"
         onChange={(event) => setFeeling({...userFeeling, feeling: event.target.value})}
-         type="number"></input>
-        <button>NEXT</button>
+        type="number"></input>
+        <button data-testid="next">NEXT</button>
         </form>
         </>
     )
