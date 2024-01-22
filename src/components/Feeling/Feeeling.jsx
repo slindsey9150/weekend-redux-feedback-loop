@@ -16,7 +16,7 @@ function Feelings () {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        dispatch({ type: 'ADD_FEEDBACK_INFO', payload: userFeeling })
+        dispatch({ type: 'ADD_FEELING_INFO', payload: userFeeling })
         history.push('/understanding/')}
 
     return (

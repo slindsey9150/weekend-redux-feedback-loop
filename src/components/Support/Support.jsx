@@ -14,7 +14,7 @@ function Support () {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        dispatch({ type: 'ADD_FEEDBACK_INFO', payload: userSupport })
+        dispatch({ type: 'ADD_SUPPORT_INFO', payload: userSupport })
         history.push('/comments/')}
 
     return (

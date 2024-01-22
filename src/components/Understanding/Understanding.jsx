@@ -14,7 +14,7 @@ function Understanding () {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        dispatch({ type: 'ADD_FEEDBACK_INFO', payload: userUnderstanding })
+        dispatch({ type: 'ADD_UNDERSTANDING_INFO', payload: userUnderstanding })
         history.push('/support/')}
 
     return (

@@ -14,7 +14,7 @@ function Comments () {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        dispatch({ type: 'ADD_FEEDBACK_INFO', payload: userComments })
+        dispatch({ type: 'ADD_COMMENT_INFO', payload: userComments })
         history.push('/')}
 
 
