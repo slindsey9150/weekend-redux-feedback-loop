@@ -16,13 +16,13 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.1",
     "cypress": "^13.3.1",
-    "nodemon": "^3.0.1",
+    "nodemon": "^3.0.3",
     "start-server-and-test": "^2.0.1",
     "vite": "^5.0.10",
     "vitest": "^1.1.0"
   },
   "scripts": {
-    "start": "node server/server.js",
+    "start": "nodemon server/server.js",
     "client": "vite",
     "server": "nodemon --watch server server/server.js",
     "start:test": "export NODE_ENV=test PORT=5002 && npm run build && npm start",
