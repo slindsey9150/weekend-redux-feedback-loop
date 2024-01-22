@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import './App.css';
+import { HashRouter as Router, Route } from "react-router-dom";
+import { Provider } from "react-redux"
 import Feelings from '../Feeling/Feeeling';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
@@ -18,6 +20,12 @@ function App() {
           <Support/>
           <Comments/>
           <Understanding/>
+          <Router>
+            <Route path="/"></Route>
+            <Route path="/understanding/"></Route>
+            <Route path="/support/"></Route>
+            <Route path="/comments/"></Route>
+          </Router>
     </div>
   );
 }
